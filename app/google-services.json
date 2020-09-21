@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "714126548293",
+    "firebase_url": "https://lk-shop-1ee77.firebaseio.com",
+    "project_id": "lk-shop-1ee77",
+    "storage_bucket": "lk-shop-1ee77.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:714126548293:android:2004bf55083d0c8f47322c",
+        "android_client_info": {
+          "package_name": "com.example.shoppingapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "714126548293-lofomkn9g2rvruc02mg1nubjclia6jrc.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCWp0YqTX6aqKglJm_k8GBYR7rWVlzGM08"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "714126548293-lofomkn9g2rvruc02mg1nubjclia6jrc.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

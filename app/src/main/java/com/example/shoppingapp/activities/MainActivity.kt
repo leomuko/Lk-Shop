@@ -45,21 +45,25 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         bottom_navigation.setOnNavigationItemSelectedListener {
             when(it.itemId){
                 R.id.bottomNav_home -> {
+                    supportActionBar?.title = "HOME"
                     supportFragmentManager.beginTransaction().replace(R.id.fragment_container,
                         HomeFragment()).commit()
                     true
                 }
                 R.id.bottomNav_more -> {
+                    supportActionBar?.title = "MORE"
                     supportFragmentManager.beginTransaction().replace(R.id.fragment_container,
                         MoreFragment()).commit()
                     true
                 }
                 R.id.bottomNav_shop -> {
+                    supportActionBar?.title = "SHOP"
                     supportFragmentManager.beginTransaction().replace(R.id.fragment_container,
                         ShopFragment()).commit()
                     true
                 }
                 R.id.bottomNav_wallet -> {
+                    supportActionBar?.title = "WALLET"
                     supportFragmentManager.beginTransaction().replace(R.id.fragment_container,
                         WalletFragment()).commit()
                     true
@@ -86,6 +90,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
                 if(bottom_navigation.visibility == View.GONE){
                     bottom_navigation.visibility = View.VISIBLE
                 }
+                supportActionBar?.title = "HOME"
                 supportFragmentManager.beginTransaction().replace(R.id.fragment_container,
                 HomeFragment()).commit()
             }

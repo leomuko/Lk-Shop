@@ -1,5 +1,6 @@
 package com.example.shoppingapp.activities.UI.Home
 
+import android.content.Intent
 import android.graphics.Color
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -7,15 +8,21 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.example.shoppingapp.R
+import com.example.shoppingapp.activities.Login.LoginActivity
 import com.example.shoppingapp.helpers.sliderAdapter
+import com.google.firebase.auth.FirebaseAuth
 import com.smarteist.autoimageslider.IndicatorView.animation.type.IndicatorAnimationType
 import com.smarteist.autoimageslider.SliderAnimations
 import com.smarteist.autoimageslider.SliderView
+import kotlinx.android.synthetic.main.fragment_home.*
+import kotlinx.android.synthetic.main.fragment_home.view.*
 
 
 class HomeFragment : Fragment() {
 
-    val imageSliderAdapter = sliderAdapter(context);
+    val imageSliderAdapter = sliderAdapter(context)
+    val mAuth : FirebaseAuth = FirebaseAuth.getInstance()
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -33,6 +40,15 @@ class HomeFragment : Fragment() {
         sliderView.indicatorSelectedColor = R.color.colorPrimary
         sliderView.indicatorUnselectedColor = Color.GRAY
         sliderView.scrollTimeInSec = 4 //set scroll delay in seconds :
+
+        if(mAuth.currentUser != null){
+            rootView.login_button.visibility = View.GONE
+            rootView.register_button.visibility = View.GONE
+            rootView.tap_order_text.visibility = View.GONE
+        }
+        rootView.login_button.setOnClickListener(View.OnClickListener {
+            startActivity(Intent(context, LoginActivity::class.java))
+        })
 
         sliderView.startAutoCycle()
         for (i in 1..5){
