@@ -12,7 +12,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".activities.Login.LoginActivity"></activity>
+        <activity android:name=".activities.Register.RegisterActivity"></activity>
+        <activity android:name=".activities.Login.LoginActivity" />
         <activity
             android:name=".activities.Splash.SplashActivity"
             android:theme="@style/AppTheme.NoActionBar">

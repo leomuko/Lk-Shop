@@ -8,6 +8,8 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.example.shoppingapp.R
+import com.example.shoppingapp.activities.Login.LoginActivity
+import com.example.shoppingapp.activities.Register.RegisterActivity
 import com.example.shoppingapp.helpers.sliderAdapter
 import com.google.firebase.auth.FirebaseAuth
 import com.smarteist.autoimageslider.IndicatorView.animation.type.IndicatorAnimationType
