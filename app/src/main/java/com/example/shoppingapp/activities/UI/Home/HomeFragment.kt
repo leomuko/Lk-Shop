@@ -1,27 +1,46 @@
 package com.example.shoppingapp.activities.UI.Home
 
+import android.graphics.Color
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.Fragment
 import com.example.shoppingapp.R
-
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-private const val ARG_PARAM1 = "param1"
-private const val ARG_PARAM2 = "param2"
+import com.example.shoppingapp.helpers.sliderAdapter
+import com.smarteist.autoimageslider.IndicatorView.animation.type.IndicatorAnimationType
+import com.smarteist.autoimageslider.SliderAnimations
+import com.smarteist.autoimageslider.SliderView
 
 
 class HomeFragment : Fragment() {
 
-
+    val imageSliderAdapter = sliderAdapter(context);
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_home, container, false)
+        val rootView : View= inflater.inflate(R.layout.fragment_home, container, false)
+
+        val sliderView :SliderView = rootView.findViewById(R.id.imageSlider)
+
+
+        sliderView.setSliderAdapter(imageSliderAdapter);
+        sliderView.setIndicatorAnimation(IndicatorAnimationType.WORM)
+        sliderView.setSliderTransformAnimation(SliderAnimations.SIMPLETRANSFORMATION)
+        sliderView.autoCycleDirection = SliderView.AUTO_CYCLE_DIRECTION_BACK_AND_FORTH
+        sliderView.indicatorSelectedColor = R.color.colorPrimary
+        sliderView.indicatorUnselectedColor = Color.GRAY
+        sliderView.scrollTimeInSec = 4 //set scroll delay in seconds :
+
+        sliderView.startAutoCycle()
+        for (i in 1..5){
+            imageSliderAdapter.addItem("https://images.unsplash.com/photo-1461151304267-38535e780c79?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1190&q=80")
+        }
+
+
+        return rootView;
     }
 
 

@@ -13,4 +13,6 @@
     <string name="close_drawer">Close Navigation Drawer</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="welcome_text">WELCOME TO THE BEST GADGET SHOP IN TOWN</string>
+    <string name="easy_tap_text">Login to view recent orders and for an easy ontap re-order</string>
 </resources>

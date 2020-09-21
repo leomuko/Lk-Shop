@@ -1,5 +1,6 @@
 package com.example.shoppingapp.activities
 
+import android.content.Context
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.MenuItem
@@ -82,7 +83,9 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
     override fun onNavigationItemSelected(item: MenuItem): Boolean {
         when(item.itemId){
             R.id.nav_home -> {
-
+                if(bottom_navigation.visibility == View.GONE){
+                    bottom_navigation.visibility = View.VISIBLE
+                }
                 supportFragmentManager.beginTransaction().replace(R.id.fragment_container,
                 HomeFragment()).commit()
             }
