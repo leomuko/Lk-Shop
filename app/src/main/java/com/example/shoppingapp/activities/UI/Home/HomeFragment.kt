@@ -9,6 +9,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.example.shoppingapp.R
 import com.example.shoppingapp.activities.Login.LoginActivity
+import com.example.shoppingapp.activities.Register.RegisterActivity
 import com.example.shoppingapp.helpers.sliderAdapter
 import com.google.firebase.auth.FirebaseAuth
 import com.smarteist.autoimageslider.IndicatorView.animation.type.IndicatorAnimationType
@@ -48,6 +49,9 @@ class HomeFragment : Fragment() {
         }
         rootView.login_button.setOnClickListener(View.OnClickListener {
             startActivity(Intent(context, LoginActivity::class.java))
+        })
+        rootView.register_button.setOnClickListener(View.OnClickListener {
+            startActivity(Intent(context, RegisterActivity::class.java))
         })
 
         sliderView.startAutoCycle()
