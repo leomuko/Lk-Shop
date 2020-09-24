@@ -20,8 +20,6 @@ class RegisterActivity : AppCompatActivity() {
                 lastNameInputLayout.error = getString(R.string.last_name_error)
             }else if (registerEmailInputText.text == null || !Patterns.EMAIL_ADDRESS.matcher(registerEmailInputText.text.toString()).matches()){
                 registerEmailInputLayout.error = getString(R.string.email_input_error)
-            }else if (phoneInputText.text == null){
-                phoneInputLayout.error = getString(R.string.phone_error_text)
             }else if (registerPasswordInputText.text == null || registerPasswordInputText.text!!.length < 6){
                 registerPasswordInputLayout.error = getString(R.string.password_length_error)
             }else if(confirmInputText.text == null || confirmInputText.text != registerPasswordInputText.text){
