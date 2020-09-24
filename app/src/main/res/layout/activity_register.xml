@@ -58,51 +58,60 @@
             android:layout_height="wrap_content"
             android:hint="LAST NAME" />
     </com.google.android.material.textfield.TextInputLayout>
-
-    <TextView
-        android:id="@+id/textView4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:text="BIRTHDAY"
-        android:textSize="18sp"
-        app:layout_constraintStart_toStartOf="@+id/lastNameInputLayout"
-        app:layout_constraintTop_toBottomOf="@+id/lastNameInputLayout" />
-
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/birthdayInputLayout"
-        style="@style/Widget.Design.TextInputLayout"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        app:layout_constraintEnd_toEndOf="@+id/lastNameInputLayout"
-        app:layout_constraintStart_toStartOf="@+id/lastNameInputLayout"
-        app:layout_constraintTop_toBottomOf="@+id/textView4">
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/bithdayInputText"
-            android:layout_width="match_parent"
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/registerEmailInputLayout"
+            style="@style/Widget.Design.TextInputLayout"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:hint="Click to enter BirthDay" />
-    </com.google.android.material.textfield.TextInputLayout>
+            android:layout_marginTop="10dp"
+            app:layout_constraintEnd_toEndOf="@+id/lastNameInputLayout"
+            app:layout_constraintStart_toStartOf="@+id/lastNameInputLayout"
+            app:layout_constraintTop_toBottomOf="@+id/lastNameInputLayout">
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/passwordInputLayout"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        style="@style/Widget.Design.TextInputLayout"
-        app:layout_constraintEnd_toEndOf="@+id/birthdayInputLayout"
-        app:layout_constraintStart_toStartOf="@+id/birthdayInputLayout"
-        app:layout_constraintTop_toBottomOf="@+id/birthdayInputLayout">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/registerEmailInputText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Email"
+                android:inputType="textWebEmailAddress|textEmailAddress" />
+        </com.google.android.material.textfield.TextInputLayout>
 
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/passwordInputText"
-            android:layout_width="match_parent"
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/phoneInputLayout"
+            style="@style/Widget.Design.TextInputLayout"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:hint="PASSWORD"
-            android:inputType="textPassword" />
-    </com.google.android.material.textfield.TextInputLayout>
+            android:layout_marginTop="10dp"
+            app:layout_constraintEnd_toEndOf="@+id/registerEmailInputLayout"
+            app:layout_constraintStart_toStartOf="@+id/registerEmailInputLayout"
+            app:layout_constraintTop_toBottomOf="@+id/registerEmailInputLayout">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/phoneInputText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Phone Number"
+                android:inputType="textPassword|phone" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/registerPasswordInputLayout"
+            style="@style/Widget.Design.TextInputLayout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            app:layout_constraintEnd_toEndOf="@+id/phoneInputLayout"
+            app:layout_constraintStart_toStartOf="@+id/phoneInputLayout"
+            app:layout_constraintTop_toBottomOf="@id/phoneInputLayout">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/registerPasswordInputText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="PASSWORD"
+                android:inputType="textPassword" />
+        </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/confirmInputLayout"
@@ -110,9 +119,9 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         style="@style/Widget.Design.TextInputLayout"
-        app:layout_constraintEnd_toEndOf="@+id/passwordInputLayout"
-        app:layout_constraintStart_toStartOf="@+id/passwordInputLayout"
-        app:layout_constraintTop_toBottomOf="@+id/passwordInputLayout">
+        app:layout_constraintEnd_toEndOf="@+id/registerPasswordInputLayout"
+        app:layout_constraintStart_toStartOf="@+id/registerPasswordInputLayout"
+        app:layout_constraintTop_toBottomOf="@+id/registerPasswordInputLayout">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/confirmInputText"
@@ -123,7 +132,7 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/register_button"
         android:layout_width="250dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
@@ -138,8 +147,8 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:text="Already have an account ?"
-        app:layout_constraintStart_toStartOf="@+id/button"
-        app:layout_constraintTop_toBottomOf="@+id/button" />
+        app:layout_constraintStart_toStartOf="@+id/register_button"
+        app:layout_constraintTop_toBottomOf="@+id/register_button" />
 
     <TextView
         android:id="@+id/textView8"
